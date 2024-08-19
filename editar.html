@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Edição</title>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1>Aparecida Nutrição</h1>
+			</div>
+		</header>
+		<main>
+			
+			<style>
+				form{
+					margin-inline: 25%;
+					padding: 0;
+				}
+				form h1{
+					font-size: 2.6em;
+					text-align: center;
+				}
+				label{
+					margin: 1.9%;
+                display: inline-block;
+				}
+				input{
+					padding: 3%;
+                  margin: 2%;
+				}
+				button{
+					border-radius: 10px;
+				}
+				button:hover{
+					background-color: rgb(53, 154, 236);
+				}
+				.paciente-invalido{
+					color: red;
+				}
+				span{
+					color: red;
+					font-size: 1.3em;
+				}
+			</style>
+			
+			<form id="form-adiciona" data-form>
+				<h1>Adicionar novo Paciente</h1>
+				<hr>
+				<ul id="mensagem-erro"></ul><br>
+				<label for="nome">Nome: <br>
+					<input type="text" name="nome" id="nome" placeholder="nome"  required data-nome>
+				</label>
+				<label for="peso">Peso: <br>
+					<input type="text" name="peso" id="peso" placeholder="peso" required data-peso>
+				</label>
+				<label for="altura">Altura: <br>
+					<input type="text" name="altura" id="altura" placeholder="altura" required data-altura>
+				</label>
+				<label for="gordura">% de Gordura: <br>
+					<input type="text" name="gordura" id="gordura" placeholder="% de gordura" required data-gordura>
+				</label>
+				<button type="submit" id="botao">Enviar</button>
+			</form>
+		</main>
+
+		<script type="module" src="./controller/atualizaCliente-controller.js"></script>
+		
+		
+		
+	</body>
+</html>

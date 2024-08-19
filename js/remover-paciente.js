@@ -1,4 +1,4 @@
-var tabela = document.querySelector("#tabela-paciente");
+var tabelaT = document.querySelector("#tabela-paciente");
 
 pacientes.forEach(paciente => {
     paciente.addEventListener("dblclick", function(event){

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Aparecida Nutrição</title>
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 
@@ -30,106 +30,40 @@
 							<th>Altura(m)</th>
 							<th>Gordura Corporal(%)</th>
 							<th>IMC</th>
+							<th>Ações</th>
 						</tr>
 					</thead>
-					<tbody id="tabela-pacientes">
-						<tr class="paciente" id="primeiro-paciente">
-							<td class="info-nome">Paulo</td>
-							<td class="info-peso">100</td>
-							<td class="info-altura">2.00</td>
-							<td class="info-gordura">10</td>
-							<td class="info-imc">0</td>
-						</tr>
-
-						<tr class="paciente" id="segundo-paciente">
-							<td class="info-nome">João</td>
-							<td class="info-peso">80</td>
-							<td class="info-altura">1.72</td>
-							<td class="info-gordura">40</td>
-							<td class="info-imc">0</td>
-						</tr>
-
-						<tr class="paciente" >
-							<td class="info-nome">Erica</td>
-							<td class="info-peso">54</td>
-							<td class="info-altura">1.64</td>
-							<td class="info-gordura">14</td>
-							<td class="info-imc">0</td>
-						</tr>
-
-						<tr class="paciente">
-							<td class="info-nome">Douglas</td>
-							<td class="info-peso">85</td>
-							<td class="info-altura">1.73</td>
-							<td class="info-gordura">24</td>
-							<td class="info-imc">0</td>
-						</tr>
-						<tr class="paciente" >
-							<td class="info-nome">Tatiana</td>
-							<td class="info-peso">46</td>
-							<td class="info-altura">1.55</td>
-							<td class="info-gordura">19</td>
-							<td class="info-imc">0</td>
-						</tr>
+					<tbody id="tabela-pacientes" data-tabela>
+						
 					</tbody>
 				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar paciente:  </span>
 				
 			</section>
-			<style>
-				form{
-					
-					margin-inline: 25%;
-					padding: 0;
-					
-				}
-				form h1{
-					font-size: 2.6em;
-					text-align: center;
-				}
-				label{
-					display: inline-block;
-					margin-top: 1.9%;
-				}
-				input{
-					padding: 3%;
-				}
-				button{
-					border-radius: 10px;
-				}
-				button:hover{
-					background-color: rgb(53, 154, 236);
-				}
-				.paciente-invalido{
-					color: red;
-				}
-				span{
-					color: red;
-					font-size: 1.3em;
-				}
-			</style>
 			
-			<form id="form-adiciona">
+			
+			<form id="form-adiciona" data-form>
 				<h1>Adicionar novo Paciente</h1>
 				<hr>
 				<ul id="mensagem-erro"></ul><br>
 				<label for="nome">Nome:
-					<input type="text" name="nome" id="nome" placeholder="nome">
+					<input type="text" name="nome" id="nome" placeholder="nome"  required data-nome>
 				</label>
 				<label for="peso">Peso:
-					<input type="text" name="peso" id="peso" placeholder="peso">
+					<input type="text" name="peso" id="peso" placeholder="peso" required data-peso>
 				</label>
 				<label for="altura">Altura:
-					<input type="text" name="altura" id="altura" placeholder="altura">
+					<input type="text" name="altura" id="altura" placeholder="altura" required data-altura>
 				</label>
 				<label for="gordura">% de Gordura:
-					<input type="text" name="gordura" id="gordura" placeholder="% de gordura">
+					<input type="text" name="gordura" id="gordura" placeholder="% de gordura" required data-gordura>
 				</label>
 				<button type="submit" id="botao">Enviar</button>
 			</form>
 		</main>
-		<script src="js/principal.js"></script>
-		<script src="js/calculo.js"></script>
-		<script src="js/remover-paciente.js"></script>
-		<script src="js/filtra.js"></script>
+
+		<script type="module" src="./controller/listaClientes-controller.js"></script>
+		<script type="module" src="./controller/cadastraClientes-controller.js"></script>
+		<script src="./js/filtra.js"></script>
 	</body>
 </html>

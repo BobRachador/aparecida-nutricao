@@ -147,3 +147,58 @@ ul{
 .invisivel{
 	display: none;
 }
+.icon{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+.icon:hover{
+	background-color: rgb(63, 63, 236, 0.7);
+}
+.icon img{
+	width: 100%;
+}
+ul li{
+	display: inline-block;
+}
+.botao-simples{
+	color: #333;
+	background: none;
+	border: none;
+}
+.botao-simples:hover{
+	background: none;
+}
+form{
+					
+	margin-inline: 25%;
+	padding: 0;
+	
+}
+form h1{
+	font-size: 2.6em;
+	text-align: center;
+}
+label{
+	display: inline-block;
+	margin-top: 1.9%;
+}
+input{
+	padding: 3%;
+}
+button{
+	border-radius: 10px;
+}
+button:hover{
+	background-color: rgb(53, 154, 236);
+}
+.paciente-invalido{
+	color: red;
+}
+span{
+	color: red;
+	font-size: 1.3em;
+}
+.botao-simples--excluir:hover{
+	color: red;
+}
